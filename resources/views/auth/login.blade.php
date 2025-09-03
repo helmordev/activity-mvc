@@ -16,6 +16,12 @@
                 </div>
             @endif
 
+            @error('login')
+            <div class="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                {{ $message }}
+            </div>
+            @enderror
+
             <form method="POST" action="{{ route('login') }}" class="space-y-6">
                 @csrf
 
